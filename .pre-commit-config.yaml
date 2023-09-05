@@ -1,0 +1,26 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+    - id: check-yaml
+    - id: check-json
+    - id: check-toml
+    - id: check-xml
+    - id: end-of-file-fixer
+    - id: trailing-whitespace
+    - id: fix-byte-order-marker
+    - id: mixed-line-ending
+
+  - repo: https://github.com/pycqa/flake8
+    rev: 6.0.0
+    hooks:
+      - id: flake8
+  - repo: local
+    hooks:
+      - id: autopep8
+        name: autopep8
+        description: Run autopep8 against changed ruby files
+        entry: .github/hooks/autopep8.sh
+        language: system
+        verbose: true
+        stages: [pre-commit]
