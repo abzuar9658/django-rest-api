@@ -20,7 +20,7 @@ repos:
     hooks:
       - id: autopep8
         name: autopep8
-        description: Run autopep8 against changed ruby files
+        description: Run autopep8 against changed .py files
         entry: .github/hooks/autopep8.sh
         language: system
         verbose: true
